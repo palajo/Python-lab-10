@@ -1,4 +1,6 @@
 class Film:
+    # static field
+    lpnu = "let me live"
 
     def __init__(self, title=None, durationInMinutes=None, quantityOfReviewsIMDB=None, genre=None,
                  yearOfCreation=None, budget=None):
@@ -15,22 +17,27 @@ class Film:
     def __str__(self):
         return \
             "Title: " + str(self.title) + "\n" + \
-            "Duration: " + str(self.durationInMinutes) + "\n" + \
+            "Duration (min.): " + str(self.durationInMinutes) + "\n" + \
             "Quantity of reviews on IMDB: " + str(self.quantityOfReviewsIMDB) + "\n" + \
             "Genre: " + str(self.genre) + "\n" + \
             "Year: " + str(self.yearOfCreation) + "\n" + \
             "Budget: " + str(self.budget) + "\n"
 
     @staticmethod
-    def main():
+    def printStaticVariable():
+        return Film.lpnu
 
-        film_1 = Film("Bad boys forver", "30", "1029", "Blockbuster", "2020", "21 000 0000")
-        film_2 = Film("Bad boys forver 2", "12", "987", "Blockbuster")
+    @staticmethod
+    def main():
+        film_1 = Film("Bad boys for life", "124", "1029", "Comedy/Thriller", "2020", "90 000 0000")
+        film_2 = Film("Fast&Furious 8", "149", "2901", "Thriller")
         film_3 = Film()
 
         print(film_1.__str__())
         print(film_2.__str__())
         print(film_3.__str__())
+
+        print(Film.printStaticVariable())
 
 
 if __name__ == '__main__':
