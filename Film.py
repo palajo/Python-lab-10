@@ -30,12 +30,14 @@ class Film:
     @staticmethod
     def main():
         film_1 = Film("Bad boys for life", "124", "1029", "Comedy/Thriller", "2020", "90 000 0000")
-        film_2 = Film("Fast&Furious 8", "149", "2901", "Thriller")
-        film_3 = Film()
+        film_2 = Film("Angels & Demons", "146", "2832", "Thriller/Detective", "2009")
+        film_3 = Film("Fast&Furious 8", "149", "2901", "Thriller")
+        film_4 = Film()
 
         print(film_1.__str__())
         print(film_2.__str__())
         print(film_3.__str__())
+        print(film_4.__str__())
 
         print(Film.printStaticVariable())
 
